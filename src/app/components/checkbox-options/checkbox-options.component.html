@@ -1,0 +1,34 @@
+<div class="controls">
+  <div class="control-group">
+    <label class="control control-checkbox">
+      <input type="checkbox"
+             [checked]="upper"
+             (change)="updateUpperOption()" />Include Uppercase Letters
+      <div class="control-indicator"></div>
+    </label>
+
+    <label class="control control-checkbox">
+      <input type="checkbox"
+             [checked]="lower"
+             (change)="updateLowerOption() " />Include Lowercase Letters
+      <div class="control-indicator"></div>
+    </label>
+
+    <label class="control control-checkbox">
+      <input type="checkbox"
+             [checked]="number"
+             (change)="updateNumberOption() " />Include Numbers
+      <div class="control-indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+      <input type="checkbox"
+             [checked]="symbol"
+             (change)="updateSymbolOption() " />Include Symbols
+      <div class="control-indicator"></div>
+    </label>
+  </div>
+</div>
+
+<div class="error">
+  <p *ngIf="error">Please select an option!</p>
+</div>

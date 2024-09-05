@@ -1,0 +1,134 @@
+@use '/src/variables';
+
+h1 {
+  color: variables.$purple-gunsmoke;
+  @include variables.body-text;
+  text-align: center;
+}
+
+
+.interactive {
+  height: 70vh;
+  width: 343px;
+  @include variables.flex-column;
+  margin-top: 30px;
+  padding: 20px 10px;
+  background-color: variables.$black-russian;
+}
+
+/* button without glow on hover*/
+// .btn-primary {
+//   margin: 25px;
+//   width: 311px;
+//   height: 56px;
+//   border: 2px solid variables.$river-styx;
+//   background-color: variables.$synthetic-mint;
+//   color: variables.$river-styx;
+//   text-transform: uppercase;
+//   font-size: 18px;
+// }
+
+// .btn-primary:hover,
+// .btn-primary:active {
+//   background-color: variables.$black-russian;
+//   color: variables.$synthetic-mint;
+//   border: 2px solid variables.$synthetic-mint;
+// }
+
+// .btn-primary:hover>svg,
+// .btn-primary:active>svg {
+//   fill: variables.$synthetic-mint ;
+// }
+
+/* button  glow on hover */
+.btn-primary {
+  margin: 25px;
+  width: 311px;
+  height: 56px;
+  border: none;
+  border: 2px solid variables.$synthetic-mint;
+  background: variables.$river-styx ;
+  color: variables.$synthetic-mint ;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+ .btn-primary:hover>svg,
+ .btn-primary:active>svg {
+  fill: variables.$synthetic-mint ;
+}
+
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, variables.$synthetic-mint, variables.$adventure-island-pink, variables.$soaked-in-sun, variables.$synthetic-mint, variables.$error-red, variables.$infrared);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: variables.$synthetic-mint;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: variables.$absence-of-light;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .interactive {
+    width: 540px;
+    padding: 20px;
+  }
+
+  .btn-primary {
+    height: 65px;
+    width: 496px;
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {}

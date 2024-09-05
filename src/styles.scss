@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@use './variables';
+
+
+* {
+  font-family: variables.$global-font;
+  color: variables.$lilac-murmur;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: variables.$absence-of-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}

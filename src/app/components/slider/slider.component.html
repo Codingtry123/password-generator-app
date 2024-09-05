@@ -1,0 +1,11 @@
+<div class="custom-ngx-slider">
+  <div class="slider-label">Character Length
+    <span class="slider-label-value">
+      {{value}}
+    </span>
+  </div>
+  <ngx-slider [(value)]="value"
+              (valueChange)="updateValue($event)"
+              [options]="options">
+  </ngx-slider>
+</div>

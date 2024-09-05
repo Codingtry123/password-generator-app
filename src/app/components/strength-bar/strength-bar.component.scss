@@ -1,0 +1,128 @@
+@use '/src/variables';
+
+.container {
+  background-color: variables.$river-styx;
+  height: 65px;
+  width: 291px;
+  @include variables.flex-row;
+  text-transform: uppercase;
+  margin: 10px auto;
+  padding: 5px 10px;
+
+}
+
+.title {
+  @include variables.body-text;
+}
+
+.title p {
+  color: variables.$purple-gunsmoke;
+}
+
+.status {
+  @include variables.heading-m;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+ animation: 2s anim-strength ease-in-out forwards;
+}
+
+.display {
+  width: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+
+}
+
+@keyframes anim-strength {
+  0% {
+    opacity: 0;
+    transform: translateX(70%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.bar {
+  height: 24px;
+  width: 6px;
+  border: 2px solid variables.$lilac-murmur ;
+
+}
+
+.v-weak {
+  border: 2px solid variables.$infrared ;
+  background-color: variables.$infrared ;
+
+}
+
+.weak {
+  border: 2px solid variables.$adventure-island-pink;
+  background-color: variables.$adventure-island-pink;
+
+}
+
+.medium {
+  border: 2px solid variables.$soaked-in-sun;
+  background-color: variables.$soaked-in-sun;
+
+}
+
+.strong {
+  border: 2px solid variables.$synthetic-mint;
+  background-color: variables.$synthetic-mint;
+
+}
+.first{animation: 1s anim-lineUp ease-out }
+.second{animation: 2s anim-lineUp ease-out ;}
+.third{animation: 3s anim-lineUp ease-out ;}
+.fourth{animation: 4s anim-lineUp ease-out ;}
+
+
+
+
+
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .container {
+
+    height: 72px;
+    width: 446px;
+    margin: 10px auto;
+    padding: 5px 25px;
+
+  }
+}
+
+@media screen and (min-width: 1440px) {}

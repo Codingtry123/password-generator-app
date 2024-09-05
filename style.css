@@ -1,0 +1,316 @@
+:root{
+    
+--absence-of-light: rgb(8, 7, 11);
+--black-russian: hsl(248, 10%, 15%);
+--purple-gunsmoke: hsl(251, 9%, 53%);
+--lilac-murmur: hsl(252, 11%, 91%);
+--river-styx: hsl(248, 15%, 11%);
+--synthetic-mint: hsl(127, 100%, 82%);
+--infrared: hsl(0, 91%, 63%);
+--adventure-island-pink: hsl(13, 95%, 66%);
+--soaked-in-sun: hsl(42, 91%, 68%);
+--error-red: hsl(0, 100%, 66%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    font-family: '';
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+   
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  body{
+    background-color: black;
+  }
+  .main{
+    width: 450px;
+    height:460px;
+   
+    display:grid;
+    grid-template-rows: 45px 30px 385px;
+    grid-template-columns: 1fr;
+   
+  }
+  .password{
+    grid-row: 1;
+    grid-column: 1;
+    border-radius: 10px;
+    background-color: var(--black-russian);
+    display: flex;
+    justify-content: space-between;
+    padding:10px 20px;
+    align-items: center;
+    font-size:18px;
+    color: white;
+  }
+  .password path{
+    fill:var(--synthetic-mint);
+  }
+  .svg1{
+    transform: scale(0.8);
+  }
+  
+  .gener{
+    position: absolute;
+    color:var(--lilac-murmur);
+    top:50px;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .low *{
+    color:white;
+  }
+  .len{
+    display: flex;
+justify-content: space-between;
+margin-bottom: 0.8rem;
+  }
+ 
+  .space{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: black;
+    z-index: 2;
+  }
+  .len2{
+    color: var(--synthetic-mint);
+    font-size: 20px;
+    margin-bottom: 0.6rem;
+  }
+
+
+  .low{
+    grid-column: 1;
+    background-color: var(--black-russian);
+    border-radius: 10px;
+    grid-row: 3;
+    padding: 20px;
+  }
+  .in input{
+    width: 410px;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: black; /* Track color after the thumb */
+  }
+
+
+
+  /* WebKit background before the thumb */
+  input[type="range"]::-webkit-slider-runnable-track::before {
+    content: '';
+    height: 100%;
+    background-color: var(--synthetic-mint); /* Color before the thumb */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc(var(--value) * 1%);
+    z-index: 2;
+  }
+
+  /* Firefox specific styling */
+  input[type="range"]::-moz-range-track {
+    background: var(--synthetic-mint); /* Track color after the thumb */
+    height: 8px;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-progress {
+    background-color: var(--synthetic-mint); /* Color before the thumb */
+    height: 8px;
+  }
+  .in, .up, .lo, .num{
+    margin-bottom: 0.6rem;
+  }
+  .sym{
+    margin-bottom: 1.2rem;
+  }
+  .str{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    
+  }
+  .gen{
+    background-color: var(--synthetic-mint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color:var(--black-russian);
+    padding:10px;
+  }
+  .genl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+.up, .lo, .num, .sym{
+  display: flex;
+  justify-content: start;
+  gap:20px;
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: var(--black-russian);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .checkbox svg {
+    z-index: 2;
+    color: white;
+    display: none;
+  }
+  .checked {
+    background-color: var(--synthetic-mint);
+    border-color: var(--synthetic-mint);
+  }
+  .checked svg {
+    display: block;
+  }
+  .img{
+    display: flex;
+    flex-direction: row;
+    gap:7px;
+  }
+  .a1, .a2, .a3, .a4{
+    width:6px;
+    height:20px;
+    outline: 1px solid white;
+    background-color: var(--black-russian);
+
+
+  }
+  .show{
+    display: block;
+  }
+  .str{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height:50px;
+    padding:20px;
+    margin-bottom: 1.2rem;
+  }
+  .str1{
+    justify-self: start;
+  }
+  .str2{
+    justify-self: end;
+    font-weight: 700;
+  }
+  .str3{
+    justify-self: end;
+  }
+  .s1, .s2, .s3, .s4{
+    display: none;
+  }
+  .img0 .a1, .img0 .a2, .img0 .a3, .img0 .a4{
+    background-color: var(--black-russian);
+  }
+  .img1 .a2, .img1 .a3, .img1 .a4{
+    background-color: var(--black-russian);
+  }
+  .img2 .a3, .img2 .a4{
+    background-color: var(--black-russian);
+  }
+  .img3 .a4{
+    background-color: var(--black-russian);
+  }
+  .img4 .a1, .img4 .a2, .img4 .a3, .img4 .a4{
+    background-color: var(--synthetic-mint);
+  }
+  .img3 .a2, .img3 .a3, .img3 .a1{
+    background-color: var(--soaked-in-sun);
+  }
+  .img2 .a1, .img2 .a2{
+    background-color: var(--adventure-island-pink);
+  }
+  .img1 .a1{
+    background-color: var(--infrared);
+  }
+
+
+  
+  /*<div class="space"></div>
+    <div class="low">
+        <div class="len">
+<div class="len1">
+    
+ Character Length</div>
+ <div class="len2">
+ 10</div></div>
+ <div class="in"><input type="range" max = "20" min="1" class="in1" oninput="this.style.setProperty('--value', this.value)"></div>
+ <div class="up">
+ Include Uppercase Letters</div>
+ <div class="lo">
+ Include Lowercase Letters</div>
+ <div class="num">
+ Include Numbers</div>
+ <div class="sym">
+ Include Symbols</div>
+ <div class="str">
+    <div class="str1">
+ STRENGTH</div>
+ <div class="str2">
+ WEEK
+ MEDIUM
+ STRONG</div>
+ </div>
+ <div class="gen">
+ <button type="submit" class="">GENERATE</button></div>
+    </div>
+  </div>*/

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="title">
+    <p>
+      Strength</p>
+  </div>
+  <div class="status">
+
+    <p>{{strengthLevel}}</p>
+    <!-- strength bars -->
+
+    <!-- v weak -->
+    <div class="display"
+         *ngIf="strengthLevel === 'too weak!'">
+      <div class="first bar v-weak"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- weak -->
+    <div class="display"
+         *ngIf="strengthLevel === 'weak'">
+      <div class="first bar weak"></div>
+      <div class="second bar weak"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- medium -->
+    <div class="display"
+         *ngIf="strengthLevel === 'medium'">
+      <div class="first bar medium"></div>
+      <div class="second bar medium"></div>
+      <div class="third bar medium"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- strong -->
+    <div class="display"
+         *ngIf="strengthLevel === 'strong'">
+      <div class="first bar strong"></div>
+      <div class="second bar strong"></div>
+      <div class="third bar strong"></div>
+      <div class="fourth bar strong"></div>
+    </div>
+
+    <!-- default | empty input -->
+    <div class="display"
+         *ngIf="strengthLevel === ''">
+      <div class="first bar"></div>
+      <div class="second bar"></div>
+      <div class="third bar"></div>
+      <div class="fourth bar"></div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
